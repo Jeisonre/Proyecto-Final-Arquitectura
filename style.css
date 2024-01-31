@@ -69,7 +69,56 @@ nav h1 {
     display: flex;
     justify-content: center;
     z-index: 0;
+    margin-top: 20px;
 }
 .carrusel1 {
-    width: 60%;
+    width: 55%;
+}
+
+.seccion {
+    display: block;
+    padding: 5% 15%;
+}
+.historiaContenedor {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.image {
+    width: 30%;
+    height: auto;
+    border-radius: 3%;
+    object-fit: fill;
+    flex-shrink: 0;
+}
+#pHistoriaText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#pHistoria, #pAspectos {
+    text-align: justify;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.footer-setion {
+    margin: 0 10px;
+}
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+.footer-section p {
+    margin: 5px 0;
 }
