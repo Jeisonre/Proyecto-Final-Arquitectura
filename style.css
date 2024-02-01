@@ -3,25 +3,32 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     z-index: 1;
 }
 
-nav {
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #92e27a;
+    color: black;
+    text-align: center;
+    padding: 10px 0 0;
+    z-index: 1000;
+    transition: top 0.3s;
 }
-nav h1 {
-    text-transform: uppercase;
+header.hidden {
+    top: -70px; /* Ajusta según la altura de tu barra de navegación */
 }
 
 .barraMenu {
-    background-color: aqua;
-    overflow: hidden;
-    border-top: 1px solid #dfdfdf;
+    background-color: #b4ff9a;
+    width: 100%;
+    z-index: 1000; 
+    opacity: 80%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .barraMenu ul {
     list-style: none;
@@ -43,12 +50,11 @@ nav h1 {
 .barraMenu ul ul {
     display: none;
     position: absolute;
-    background-color: aqua;
+    background-color: #b4ff9a;
     z-index: 2;
 }
 .barraMenu ul li:hover > ul {
-    display: inherit; /*este ayuda a que  el submenu se muestre cuando pasamos 
-                        por encima del item,  lo contenido en el siguuiente ul*/
+    display: inherit;
 }
 .barraMenu ul ul li {
     float: none;
@@ -61,7 +67,7 @@ nav h1 {
     text-align: left;
 }
 .barraMenu ul ul li a:hover {
-    background-color: #63f2e8;
+    background-color: #258d19;
 }
 
 .carrusel {
@@ -69,7 +75,70 @@ nav h1 {
     display: flex;
     justify-content: center;
     z-index: 0;
+    margin-top: 50px;
 }
 .carrusel1 {
-    width: 60%;
+    width: 55%;
+}
+
+.seccion {
+    display: block;
+    padding: 5% 15%;
+}
+.seccion p, h2, h3, li {
+    font-family: 'Mooli', sans-serif;
+}
+.historiaContenedor {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 1rem;
+}
+.image {
+    width: 30%;
+    height: auto;
+    border-radius: 3%;
+    object-fit: fill;
+    flex-shrink: 0;
+}
+#pHistoriaText {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+#pHistoria, #pAspectos {
+    text-align: justify;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+.footer-setion {
+    margin:0  10px;
+}
+.footer-setion h3 {
+    margin-bottom: 10px;
+}
+.footer-setion p {
+    margin: 5px 0;
+    margin-left: 60px;
+    font-size: 12px;
+}
+.footer-setion img {
+    max-width: 30px;
+    margin: 0 15px;
+}
+.footer-setion .logo-text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
