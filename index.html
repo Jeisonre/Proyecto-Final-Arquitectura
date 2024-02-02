@@ -21,17 +21,17 @@
                         <li><a href="#">Miconia</a></li>
                         <li><a href="#">Tuna captus</a></li>
                         <li><a href="#">Palo santo</a></li>
-                        <li><a href="#">Sesuvium</a></li>
-                        <li><a href="#">Lecocarpus</a></li>
+                        <li><a href="/AndresFlorayFauna/Sesuvium edmonstonei.html">Sesuvium</a></li>
+                        <li><a href="/BatallasFlorayFauna/leocarpusdarwini.html">Leocarpus</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="/fauna/fauna.html">FAUNA &#9660;</a>
                     <ul>
                         <li><a href="#">Tortuga</a></li>
-                        <li><a href="#">Iguana</a></li>
+                        <li><a href="/BatallasFlorayFauna/iguana.html">Iguana</a></li>
                         <li><a href="#">Leones marinos</a></li>
-                        <li><a href="#">Piqueros de patas azules</a></li>
+                        <li><a href="/AndresFlorayFauna/Piqueros de patas azules.html">Piqueros de patas azules</a></li>
                         <li><a href="#">Camarones no voladores</a></li>
                     </ul>
                 </li>
@@ -110,6 +110,19 @@
         </ul>
     </div>
 
+    <div class="comment-section">
+        <h2>Comentarios</h2>
+    
+        <div class="comment-input">
+            <textarea id="commentInput" placeholder="Escribe tu comentario"></textarea>
+            <button class="coment-boton" onclick="addComment()">Enviar comentario</button>
+        </div>
+
+        <div class="comments-list" id="commentsList">
+            <!-- Aquí se mostrarán los comentarios -->
+        </div>
+    </div>
+
     <footer>
         <div class="footer-content">
             <div class="footer-setion">
@@ -158,6 +171,36 @@
                 header.classList.add("hidden");
             }
             prevScrollPos = currentScrollPos;
+        }
+
+        function addComment() {
+            var commentText = document.getElementById("commentInput").value;
+
+            if (commentText.trim() !== "") {
+                var commentsList = document.getElementById("commentsList");
+
+                var commentDiv = document.createElement("div");
+                commentDiv.className = "comment";
+                commentDiv.innerHTML = commentText;
+
+                var deleteBtn = document.createElement("button");
+                deleteBtn.className = "delete-btn";
+                deleteBtn.innerHTML = "Eliminar";
+                deleteBtn.onclick = function () {
+                commentsList.removeChild(commentDiv);
+                };
+
+                var actionsDiv = document.createElement("div");
+                actionsDiv.className = "comment-actions";
+                actionsDiv.appendChild(deleteBtn);
+
+                commentDiv.appendChild(actionsDiv);
+
+                commentsList.appendChild(commentDiv);
+
+                // Limpiar el área de comentario después de enviar
+                document.getElementById("commentInput").value = "";
+            }
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
