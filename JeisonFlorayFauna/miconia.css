@@ -42,7 +42,7 @@ header.hidden {
 }
 
 .barraMenu {
-    background-color: rgb(139,144,86);
+    background-color: #80bc6c;
     width: 100%;
     z-index: 1000; 
     opacity: 80%;
@@ -60,7 +60,7 @@ header.hidden {
 }
 .barraMenu a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -68,7 +68,7 @@ header.hidden {
 .barraMenu ul ul {
     display: none;
     position: absolute;
-    background-color: rgb(93, 96, 54);
+    background-color: #b4ff9a;
     z-index: 2;
 }
 .barraMenu ul li:hover > ul {
@@ -80,12 +80,12 @@ header.hidden {
 }
 .barraMenu ul ul li a {
     padding: 12px 20px;
-    color: white;
+    color: black;
     display: block;
     text-align: left;
 }
 .barraMenu ul ul li a:hover {
-    background-color: #42200f;
+    background-color: #258d19;
 }
 
 .carrusel {
