@@ -123,6 +123,9 @@
             <!-- Aquí se mostrarán los comentarios -->
         </div>
     </div>
+    <div id="mensaje">
+        <p>¡Comentario enviado correctamente!</p>
+    </div>
 
     <footer>
         <div class="footer-content">
@@ -199,6 +202,12 @@
 
                 // Limpiar el área de comentario después de enviar
                 document.getElementById("commentInput").value = "";
+
+                document.getElementById("mensaje").style.display = "block";
+                //>setTimeout< de un tiempo de espera en milisegundos.
+                setTimeout(function() {
+                    document.getElementById("mensaje").style.display = "none";
+                },1500);
             }
         }
     </script>
